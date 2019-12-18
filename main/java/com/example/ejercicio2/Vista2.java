@@ -3,8 +3,6 @@ package com.example.ejercicio2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -12,12 +10,11 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Vista extends AppCompatActivity {
+public class Vista2 extends AppCompatActivity {
 
     Button botonInsertar,botonSelectAll,botonSelectLast,botonGetName;
     EditText textoName, textoWeight, textoName2, textoResultado;
@@ -26,12 +23,13 @@ public class Vista extends AppCompatActivity {
 
     final BBDD_Helper dbHelper = new BBDD_Helper(this);
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_vista);
-
+        setContentView(R.layout.activity_vista2);
         /*
+
 
         botonInsertar = (Button)findViewById(R.id.buttonAdd);
         botonSelectAll = (Button)findViewById(R.id.buttonGetAll);
@@ -65,35 +63,8 @@ public class Vista extends AppCompatActivity {
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, categories);
         lista.setAdapter(dataAdapter);
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-
-        SQLiteDatabase db = dbHelper.getReadableDatabase();
-
-        String tabla = "fruitis";
-
-        String[] columnas = new String[]{"" + textoName, "" + textoWeight, "" + lista, "" + textoRoteen};
-
-        Cursor c = db.query(tabla, columnas, null, null, null, null, null);
-
-        if (c.moveToFirst()) {
-            do {
-                String nombre = c.getString(c.getColumnIndex("name"));
-                String peso = c.getString(c.getColumnIndex("weight"));
-                String tipo = c.getString(c.getColumnIndex("type"));
-                String podri = c.getString(c.getColumnIndex("rotten"));
-            } while (c.moveToNext());
-
-
-            Toast.makeText(getApplicationContext(), "El registro es: " + textoResultado, Toast.LENGTH_LONG).show();
-
-
-        }
-        textoResultado.setText(" nombre " + c.getString(0) + " weight  " + c.getString(1) + " tipo "
-                + c.getString(2) + "  rotten " + c.getString(3) + ".");
-
-         */
+*/
     }
-
 
     public void ejecutar_vista(View view) {
         Intent i=new Intent(this,MainActivity.class);
