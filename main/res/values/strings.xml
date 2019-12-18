@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Ejercicio2</string>
+    <string name="form_fruit">Form fruit:</string>
+    <string name="name">Name...</string>
+    <string name="rotten">Rotten</string>
+    <string name="add">Add</string>
+    <string name="weight">Weight...</string>
+    <string name="search_fruits">Search fruits:</string>
+    <string name="get_all">Get All</string>
+    <string name="get_by_name">Get by name</string>
+    <string name="get_last">Get Last</string>
+    <string name="type">Type</string>
+</resources>
